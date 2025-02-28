@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 <body class="bg-slate-800">
-    <section class="bg-slate-200 max-w-md  mx-auto ">
+    <section class="bg-slate-200 max-w-md min-h-screen  mx-auto ">
         <header>
             <nav class="flex justify-between px-4 border-b border-black py-3 items-center">
                 <div class="flex gap-3">
@@ -47,7 +47,7 @@
                         <img class="w-8 mx-auto" src="assets/purse1.png" alt="">
                         <p class="font-semibold text-[14px] text-[#0874F2]">Pay Bill</p>
                     </div>
-                    <div class="box border border-black rounded-md text-center py-4">
+                    <div id="Transactions-box" class="box border border-black rounded-md text-center py-4">
                         <img class="w-8 mx-auto" src="assets/transaction1.png" alt="">
                         <p class="font-semibold text-[14px] text-[#0874F2]">Transactions</p>
                     </div>
@@ -58,8 +58,7 @@
                 <!--log-->
                 <form class="bg-white py-7 px-5 rounded-[16px] mt-4" action="">
                     <label class="block mb-3 text-[20px] font-bold" for="">Select A Bank</label>
-                    <select class="w-full bg-slate-100 py-3 px-5  rounded-[35px] mb-3">
-        
+                    <select id="select-bank" class="w-full bg-slate-100 py-3 px-5  rounded-[35px] mb-3">
                         <option disabled selected>Select Bank</option>
                         <option value="Bkash">bkash</option>
                         <option value="Nagad">nagad</option>
@@ -81,7 +80,7 @@
                  </form>
               </section>
               <!--cash out-->
-              <section id="cash-out" class="mx-4 mt-8 pb-20">
+              <section id="cash-out" class="mx-4 mt-8 pb-20 h-full">
                 <h2 class="font-semibold text-[18px]">Cash Out</h2>
                 <!--log-->
                 <form class="bg-white py-7 px-5 rounded-[16px] mt-4" action="">
@@ -100,6 +99,10 @@
                     </div>
                   <button id="cash-out-btn" class="bg-blue-500 px-5 py-2 text-[20px] font-bold text-white w-full mt-4 rounded-[30px]">Withdraw Money</button>
                  </form>
+              </section>
+              <section id="history" class="mx-4 mt-8 pb-20">
+                <h2 class="text-[20px] font-semibold mb-4">Transaction History</h2>
+                <div id="comment-div"></div>
               </section>
         </header>
     </section>
